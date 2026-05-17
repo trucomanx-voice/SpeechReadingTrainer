@@ -255,7 +255,7 @@ class SpeechReadingTrainer(QMainWindow):
 
         # Botão abrir arquivo
         self.btn_abrir = QPushButton(CONFIG["button_open_file"])
-        self.btn_abrir.setIcon(QIcon.fromTheme("document-send"))
+        self.btn_abrir.setIcon(QIcon(resource_path("icons", "open_file.png")))
         self.btn_abrir.setToolTip(CONFIG["button_open_file_tooltip"])
         self.btn_abrir.clicked.connect(self.abrir_arquivo)
         layout.addWidget(self.btn_abrir)
@@ -285,7 +285,7 @@ class SpeechReadingTrainer(QMainWindow):
 
         # Botão TTS
         self.btn_tts = QPushButton(CONFIG["button_tts"])
-        self.btn_tts.setIcon(QIcon.fromTheme("audio-volume-high"))
+        self.btn_tts.setIcon(QIcon(resource_path("icons", "audio-volume-high.png")))
         self.btn_tts.setToolTip(CONFIG["button_tts_tooltip"])
         self.btn_tts.setEnabled(False)
         self.btn_tts.clicked.connect(self.ouvir_tts)
@@ -295,21 +295,21 @@ class SpeechReadingTrainer(QMainWindow):
         h_layout = QHBoxLayout()
 
         self.btn_gravar = QPushButton(CONFIG["button_record"])
-        self.btn_gravar.setIcon(QIcon.fromTheme("media-record"))
+        self.btn_gravar.setIcon(QIcon(resource_path("icons", "status_circle.png")))
         self.btn_gravar.setToolTip(CONFIG["button_record_tooltip"])
         self.btn_gravar.setEnabled(False)
         self.btn_gravar.clicked.connect(self.gravar)
         h_layout.addWidget(self.btn_gravar)
 
         self.btn_parar = QPushButton(CONFIG["button_stop"])
-        self.btn_parar.setIcon(QIcon.fromTheme("media-playback-stop"))
+        self.btn_parar.setIcon(QIcon(resource_path("icons", "stop-button.png")))
         self.btn_parar.setToolTip(CONFIG["button_stop_tooltip"])
         self.btn_parar.setEnabled(False)
         self.btn_parar.clicked.connect(self.parar_gravacao)
         h_layout.addWidget(self.btn_parar)
 
         self.btn_ouvir = QPushButton(CONFIG["button_play_recording"])
-        self.btn_ouvir.setIcon(QIcon.fromTheme("audio-volume-high"))
+        self.btn_ouvir.setIcon(QIcon(resource_path("icons", "audio-volume-high.png")))
         self.btn_ouvir.setToolTip(CONFIG["button_play_recording_tooltip"])
         self.btn_ouvir.setEnabled(False)
         self.btn_ouvir.clicked.connect(self.ouvir_gravado)
@@ -329,7 +329,7 @@ class SpeechReadingTrainer(QMainWindow):
 
         # Botão Avaliar
         self.btn_avaliar = QPushButton(CONFIG["button_evaluate"])
-        self.btn_avaliar.setIcon(QIcon.fromTheme("document-page-setup"))
+        self.btn_avaliar.setIcon(QIcon(resource_path("icons", "text-x-makefile.png")))
         self.btn_avaliar.setToolTip(CONFIG["button_evaluate_tooltip"])
         self.btn_avaliar.setEnabled(False)
         self.btn_avaliar.clicked.connect(self.avaliar)
@@ -342,12 +342,12 @@ class SpeechReadingTrainer(QMainWindow):
 
 
         self.btn_salvar_lista = QPushButton(CONFIG["button_save_missing_words"])
-        self.btn_salvar_lista.setIcon(QIcon.fromTheme("document-save"))
+        self.btn_salvar_lista.setIcon(QIcon(resource_path("icons", "download-green.png")))
         self.btn_salvar_lista.clicked.connect(self.salvar_palavras_erradas)
         right_layout.addWidget(self.btn_salvar_lista)
         
         self.btn_delete_lista = QPushButton(CONFIG["button_delete_missing_words"])
-        self.btn_delete_lista.setIcon(QIcon.fromTheme("edit-delete"))
+        self.btn_delete_lista.setIcon(QIcon(resource_path("icons", "dialog-error.png")))
         self.btn_delete_lista.clicked.connect(self.apagar_lista_palavras)
         right_layout.addWidget(self.btn_delete_lista)
 
@@ -385,7 +385,7 @@ class SpeechReadingTrainer(QMainWindow):
         self.toolbar.addWidget(self.toolbar_spacer)
         
         #
-        self.configure_action = QAction(QIcon.fromTheme("document-properties"), 
+        self.configure_action = QAction(QIcon(resource_path("icons", "document-page-setup.png")), 
                                         CONFIG["toolbar_configure"], 
                                         self)
         self.configure_action.setToolTip(CONFIG["toolbar_configure_tooltip"])
@@ -393,7 +393,7 @@ class SpeechReadingTrainer(QMainWindow):
         self.toolbar.addAction(self.configure_action)
         
         #
-        self.about_action = QAction(QIcon.fromTheme("help-about"), 
+        self.about_action = QAction(QIcon(resource_path("icons", "status_help.png")), 
                                     CONFIG["toolbar_about"], 
                                     self)
         self.about_action.setToolTip(CONFIG["toolbar_about_tooltip"])
@@ -401,7 +401,7 @@ class SpeechReadingTrainer(QMainWindow):
         self.toolbar.addAction(self.about_action)
         
         # Coffee
-        self.coffee_action = QAction(   QIcon.fromTheme("emblem-favorite"), 
+        self.coffee_action = QAction(   QIcon(resource_path("icons", "emote-love.png")), 
                                         CONFIG["toolbar_coffee"], 
                                         self)
         self.coffee_action.setToolTip(CONFIG["toolbar_coffee_tooltip"])
@@ -576,11 +576,11 @@ class SpeechReadingTrainer(QMainWindow):
             
             # Ícone customizado do tema
             if   precisao>=83.3333:
-                icon = QIcon.fromTheme("trophy-gold")
+                icon = QIcon(resource_path("icons", "trophy-gold.png"))
             elif precisao>=66.6667:
-                icon = QIcon.fromTheme("trophy-silver")
+                icon = QIcon(resource_path("icons", "trophy-silver.png"))
             elif precisao>=50:
-                icon = QIcon.fromTheme("trophy-bronze")
+                icon = QIcon(resource_path("icons", "trophy-bronze.png"))
             
             if not icon.isNull():
                 msg.setIconPixmap(icon.pixmap(64, 64))

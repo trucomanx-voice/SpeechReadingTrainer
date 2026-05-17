@@ -25,6 +25,13 @@ python -m PyInstaller --onefile --windowed --name speech_reading_trainer --add-d
 
 '''
 
+import os
+from PyQt5.QtCore import QLibraryInfo
+
+os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = QLibraryInfo.location(
+    QLibraryInfo.PluginsPath
+)
+
 from speech_reading_trainer.program import main
 
 if __name__ == "__main__":

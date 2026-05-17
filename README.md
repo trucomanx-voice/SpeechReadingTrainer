@@ -23,11 +23,11 @@ To start, use the command below:
 speech-reading-trainer
 ```
 
-An example input file can be downloaded to [example1.txt](https://github.com/trucomanx/SpeechReadingTrainer/blob/main/data/example1.txt).
+An example input file can be downloaded to [example1.txt](https://github.com/trucomanx-voice/SpeechReadingTrainer/blob/main/data/example1.txt).
 
 ## 2. More information
 
-If you want more information go to [doc](https://github.com/trucomanx/SpeechReadingTrainer/blob/main/doc) directory
+If you want more information go to [doc](https://github.com/trucomanx-voice/SpeechReadingTrainer/blob/main/doc) directory
 
 ## 3. Buy me a coffee
 

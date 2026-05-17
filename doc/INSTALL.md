@@ -21,7 +21,7 @@ speech-reading-trainer
 Installing `speech-reading-trainer` program
 
 ```bash
-git clone https://github.com/trucomanx/SpeechReadingTrainer.git
+git clone https://github.com/trucomanx-voice/SpeechReadingTrainer.git
 cd SpeechReadingTrainer
 pip install -r requirements.txt
 cd src
